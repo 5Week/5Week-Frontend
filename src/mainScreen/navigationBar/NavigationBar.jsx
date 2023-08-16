@@ -1,12 +1,14 @@
-import React from 'react';
-import "./NavigationBar.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import "./NavigationBar.css";
 
-function NavigationBar(props) {
+const NavigationBar = () => {
+  return (
+    <div className="navigation">
+      <Link to="/" className="nav-link">꿈나눔</Link>
+      <Link to="/login" className="login-button">로그인</Link>
+    </div>
+  );
+};
 
-    return (
-        <div className={"navigationBar"}>
-            navigationBar
-        </div>
-    );
-}
 export default NavigationBar;
