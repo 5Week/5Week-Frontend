@@ -5,7 +5,7 @@ import "./NavigationBar.css";
 const NavigationBar = () => {
   return (
     <div className="navigation">
-      <Link to="/" className="nav-link">꿈나눔test</Link>
+      <Link to="/" className="nav-link">꿈나눔testtest</Link>
       <Link to="/login" className="login-button">로그인</Link>
     </div>
   );
