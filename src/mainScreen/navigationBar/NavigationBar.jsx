@@ -6,7 +6,7 @@ const NavigationBar = () => {
   return (
     <div className="navigation">
       <Link to="/" className="nav-link">꿈나눔testtestgg</Link>
-      <Link to="/login" className="login-button">로그인</Link>
+      <Link to="/login" className="login-button">로그인test</Link>
     </div>
   );
 };
