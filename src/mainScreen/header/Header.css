@@ -1,6 +1,25 @@
 .header {
+    position: relative;
     width: 100%;
-    height: 300px;
-    display: block;
-    background: rgb(218, 216, 138);
-}
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header-image {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+  }
+  
+  .header-text {
+    position: absolute;
+    z-index: 1;
+    left: 35%; 
+    top: 40%; 
+    transform: translate(-50%, -50%); 
+    font-family: 'Single Day', cursive;
+  }
+  
+  
