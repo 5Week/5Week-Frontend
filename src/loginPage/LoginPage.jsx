@@ -8,14 +8,14 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: 백엔드에 로그인 요청을 전송
+    // 백엔드에 로그인 요청을 전송
 
     console.log("아이디:", id, "비밀번호:", password);
   };
 
   return (
     <div className="login-container">
-      <h1>로그인</h1>
+      <h1>꿈나눔 로그인</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="id">아이디</label>
