@@ -1,3 +1,4 @@
+// App.js 파일 수정
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavigationBar from "./mainScreen/navigationBar/NavigationBar";
@@ -8,6 +9,7 @@ import LoginPage from "./loginPage/LoginPage";
 import SignUpPage from "./signUpPage/SignUpPage";
 import FindIdPage from "./findIdPage/FindIdPage";
 import FindPwPage from "./findPwPage/FindPwPage";
+import MyPage from "./myPage/MyPage";
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -42,6 +44,7 @@ function App() {
                         <Route path="/signup" element={<SignUpPage />} />
                         <Route path="/find-id" element={<FindIdPage />} />
                         <Route path="/find-password" element={<FindPwPage />} />
+                        <Route path="/mypage" element={<MyPage />} />
                     </Routes>
                 </div>
                 <Footer />

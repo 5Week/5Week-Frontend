@@ -8,10 +8,28 @@ const SignUpPage = () => {
   const [password, setPassword] = useState('');
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
 
-  const onFormSubmit = (e) => {
+  const onFormSubmit = async (e) => {
     e.preventDefault();
-    // 작성하신 회원가입 처리 로직을 여기에 추가해주세요.
-    console.log('회원가입 데이터:', { name, email, username, password, passwordConfirmation });
+
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name, email, username, password, passwordConfirmation
+      }),
+    };
+
+    const response = await fetch('http://localhost:8000/accountapp/signup', requestOptions);
+
+    if (response.ok) {
+      console.log('회원가입 성공');
+      // 성공한 경우 처리 상황
+    } else {
+      console.log('회원가입 실패')
+      // 실패한 경우 처리 상황
+    }
   };
 
   return (
