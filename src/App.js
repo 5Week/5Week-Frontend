@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavigationBar from "./mainScreen/navigationBar/NavigationBar";
 import Header from "./mainScreen/header/Header";
@@ -10,15 +10,35 @@ import FindIdPage from "./findIdPage/FindIdPage";
 import FindPwPage from "./findPwPage/FindPwPage";
 
 function App() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [userId, setUserId] = useState("");
+
+    const login = (id) => {
+        setIsLoggedIn(true);
+        setUserId(id);
+    };
+
+    const logout = () => {
+        setIsLoggedIn(false);
+        setUserId("");
+    };
+
     return (
         <Router>
             <div className="App">
-                <NavigationBar />
+                <NavigationBar
+                    isLoggedIn={isLoggedIn}
+                    userId={userId}
+                    onLogout={logout}
+                />
                 <Header />
                 <div className="MainContent">
                     <Routes>
                         <Route path="/" exact element={<MainScreen />} />
-                        <Route path="/login" element={<LoginPage />} />
+                        <Route
+                            path="/login"
+                            element={<LoginPage onLogin={login} />}
+                        />
                         <Route path="/signup" element={<SignUpPage />} />
                         <Route path="/find-id" element={<FindIdPage />} />
                         <Route path="/find-password" element={<FindPwPage />} />

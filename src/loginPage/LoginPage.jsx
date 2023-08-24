@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LoginPage.css";
 
-const LoginPage = () => {
+const LoginPage = ({ onLogin }) => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // 백엔드에 로그인 요청을 전송
-
-    console.log("아이디:", id, "비밀번호:", password);
+    // 이 예시를 위해 더미 로그인 처리를 합니다.
+    if (id && password) {
+      onLogin(id); // 이 부분을 통해 로그인이 성공했다면 App.js의 상태를 업데이트합니다.
+    } else {
+      alert("아이디와 비밀번호를 입력하세요.");
+    }
   };
 
   return (
