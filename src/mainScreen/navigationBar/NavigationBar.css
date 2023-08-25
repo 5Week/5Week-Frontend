@@ -14,10 +14,27 @@
     background-color: #f8f9fa;
   }
   
-  .nav-link, .login-button {
+  .nav-link {
     text-decoration: none;
     color: black;
     font-size: 30px;
     font-family: 'KOTRAHOPE', sans-serif;
+}
+
+  .login-button {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-family: 'KOTRAHOPE', sans-serif;
+}
+
+ .write-button {
+  width: 700px;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-family: 'KOTRAHOPE', sans-serif;
+  margin-left: auto; 
+  margin-right :-600px; 
 }
   
