@@ -7,7 +7,6 @@ const FindPasswordPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // 이곳에서 비밀번호 찾기 처리 로직을 추가해주세요
     console.log("이름:", name, "아이:", id);
   };
 

@@ -25,10 +25,8 @@ const SignUpPage = () => {
 
     if (response.ok) {
       console.log('회원가입 성공');
-      // 성공한 경우 처리 상황
     } else {
       console.log('회원가입 실패')
-      // 실패한 경우 처리 상황
     }
   };
 

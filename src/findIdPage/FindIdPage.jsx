@@ -7,7 +7,6 @@ const FindIdPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // 이곳에서 아이디 찾기 처리 로직을 추가해주세요
     console.log("이름:", name, "이메일:", email);
   };
   
